@@ -40,14 +40,7 @@ $(function() {
     var post = Backbone.Model.extend();
     
     var allPosts = Backbone.Collection.extend({
-    
-        initialize: function() {
-            // Create a clone of the entire collection
-            this.all = this.models;
-        },
-        comparator: function(model) {
-            return  model.get('title');
-        } 
+        comparator: 'title'
     });
     
     var wizardView = Backbone.View.extend({
